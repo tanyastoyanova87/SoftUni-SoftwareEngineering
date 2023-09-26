@@ -2,7 +2,7 @@ package L02DataTypesAndVariablesMoreExercise;
 
 import java.util.Scanner;
 
-public class P4RefactoringPrimeChecker {
+public class P04RefactoringPrimeChecker {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
