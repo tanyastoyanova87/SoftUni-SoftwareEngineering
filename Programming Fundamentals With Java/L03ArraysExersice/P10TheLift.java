@@ -14,14 +14,30 @@ public class P10TheLift {
                         .mapToInt(e -> Integer.parseInt(e))
                         .toArray();
 
-        while (peopleWaiting > 0){
+        boolean isFull = true;
+        for (int i = 0; i < liftState.length; i++) {
+            int availableSpace = 4 - liftState[i];
 
+            if (availableSpace > 0){
+                if (availableSpace > peopleWaiting){
+                    liftState[i] += peopleWaiting;
+                    peopleWaiting = 0;
+                    isFull = false;
 
-            for (int i = 0; i < liftState.length; i++) {
-                int currentNum = liftState[i];
-
-                
+                }else {
+                    liftState[i] = 4;
+                    peopleWaiting -= availableSpace;
+                }
             }
+        }
+        if (!isFull){
+            System.out.println("The lift has empty spots!");
+        }else if (peopleWaiting > 0){
+            System.out.printf("There isn't enough space! %d people in a queue!%n", peopleWaiting);
+        }
+        for (int people : liftState) {
+            System.out.print(people + " ");
         }
     }
 }
+
