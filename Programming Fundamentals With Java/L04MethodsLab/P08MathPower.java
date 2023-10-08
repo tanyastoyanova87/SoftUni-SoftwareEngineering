@@ -3,7 +3,6 @@ package L04MethodsLab;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-import static java.lang.Math.pow;
 
 public class P08MathPower {
     public static void main(String[] args) {
