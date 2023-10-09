@@ -1,4 +1,4 @@
-package MethodsExercise;
+package L04MethodsExercise;
 
 import java.util.Scanner;
 
