@@ -8,9 +8,7 @@ public class P10MultiplyEvensByOdds {
 
         String number = scanner.nextLine();
 
-
         System.out.println(getMultipleOfEvensAndOdds(number));
-
     }
 
     public static int getMultipleOfEvensAndOdds(String numbers) {
