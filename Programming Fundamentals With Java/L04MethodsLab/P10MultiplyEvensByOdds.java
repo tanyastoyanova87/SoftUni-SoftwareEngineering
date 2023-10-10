@@ -1,50 +1,49 @@
 package L04MethodsLab;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class P10MultiplyEvensByOdds {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int number = Integer.parseInt(scanner.nextLine());
+        String number = scanner.nextLine();
 
-        int[] digits = Arrays.stream(scanner.nextLine()
-                                .split(" "))
-                        .mapToInt(e -> Integer.parseInt(e))
-                        .toArray();
 
         System.out.println(getMultipleOfEvensAndOdds(number));
 
     }
 
-    public static int getMultipleOfEvensAndOdds(int number) {
+    public static int getMultipleOfEvensAndOdds(String numbers) {
+        int evenSum = getEvenSum(numbers);
+        int oddSum = getOddSum(numbers);
 
-        return number;
+        return evenSum * oddSum;
     }
 
-    public static int getEvenSum(int[] digits, int number) {
+    public static int getEvenSum(String numbers) {
         int evenSum = 0;
+        int number = Math.abs(Integer.parseInt(numbers));
 
-        for (int i = 0; i < digits.length; i++) {
+        while (number > 0) {
             int lastDigit = number % 10;
             if (lastDigit % 2 == 0) {
                 evenSum += lastDigit;
-                number /= 10;
             }
+            number /= 10;
         }
         return evenSum;
     }
 
-    public static int getOddSum(int[] digits, int number) {
+    public static int getOddSum(String numbers) {
         int oddSum = 0;
+        int number = Math.abs(Integer.parseInt(numbers));
 
-        for (int i = 0; i < digits.length; i++) {
+        while (number > 0) {
             int lastDigit = number % 10;
-            if (lastDigit % 2 == 0) {
+            if (lastDigit % 2 != 0) {
                 oddSum += lastDigit;
-                number /= 10;
             }
+            number /= 10;
         }
         return oddSum;
     }
