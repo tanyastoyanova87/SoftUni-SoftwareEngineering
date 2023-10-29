@@ -20,8 +20,21 @@ public class Main {
             int age = Integer.parseInt(studentInfo[2]);
             String hometown = studentInfo[3];
 
-            Student student = new Student(firstName, lastName, age, hometown);
-            students.add(student);
+            boolean exists = false;
+            for (Student student : students) {
+                if (student.getFirstName().equals(firstName) && student.getLastName().equals(lastName)) {
+                    student.setAge(age);
+                    student.setHometown(hometown);
+
+                    exists = true;
+                    break;
+                }
+            }
+            if (!exists) {
+                Student student = new Student(firstName, lastName, age, hometown);
+
+                students.add(student);
+            }
 
             line = scanner.nextLine();
         }
