@@ -1,4 +1,4 @@
-package ObjectsandClassesLab;
+package L06ObjectsandClassesLab;
 
 import java.util.*;
 import java.util.stream.Collectors;

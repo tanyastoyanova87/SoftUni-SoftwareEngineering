@@ -1,4 +1,4 @@
-package ObjectsandClassesLab.P04Songs;
+package L06ObjectsandClassesLab.P04Songs;
 
 import java.util.ArrayList;
 import java.util.List;

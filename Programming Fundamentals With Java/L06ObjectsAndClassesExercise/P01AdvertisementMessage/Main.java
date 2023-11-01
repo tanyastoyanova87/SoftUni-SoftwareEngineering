@@ -1,4 +1,4 @@
-package ObjectsAndClassesExercise.P01AdvertisementMessage;
+package L06ObjectsAndClassesExercise.P01AdvertisementMessage;
 
 import java.util.Scanner;
 

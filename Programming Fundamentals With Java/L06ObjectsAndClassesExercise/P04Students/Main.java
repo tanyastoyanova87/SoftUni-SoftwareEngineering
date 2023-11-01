@@ -1,4 +1,4 @@
-package ObjectsAndClassesExercise.P04Students;
+package L06ObjectsAndClassesExercise.P04Students;
 
 import java.util.*;
 

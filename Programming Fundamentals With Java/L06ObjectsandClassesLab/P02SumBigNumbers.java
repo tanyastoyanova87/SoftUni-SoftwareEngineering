@@ -1,4 +1,4 @@
-package ObjectsandClassesLab;
+package L06ObjectsandClassesLab;
 
 import java.math.BigInteger;
 import java.util.*;

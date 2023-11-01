@@ -1,4 +1,4 @@
-package ObjectsandClassesLab.P05Students;
+package L06ObjectsandClassesLab.P05Students;
 
 public class Student {
     private String firstName;

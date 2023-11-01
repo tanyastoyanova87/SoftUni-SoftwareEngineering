@@ -1,4 +1,4 @@
-package ObjectsandClassesLab.P04Songs;
+package L06ObjectsandClassesLab.P04Songs;
 
 public class Song {
     private String typeList;

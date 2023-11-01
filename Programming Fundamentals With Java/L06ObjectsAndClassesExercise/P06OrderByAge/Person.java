@@ -1,4 +1,4 @@
-package ObjectsAndClassesExercise.P06OrderByAge;
+package L06ObjectsAndClassesExercise.P06OrderByAge;
 
 public class Person {
     private String name;

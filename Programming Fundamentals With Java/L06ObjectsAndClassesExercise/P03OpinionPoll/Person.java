@@ -1,4 +1,4 @@
-package ObjectsAndClassesExercise.P03OpinionPoll;
+package L06ObjectsAndClassesExercise.P03OpinionPoll;
 
 public class Person {
     private String name;
