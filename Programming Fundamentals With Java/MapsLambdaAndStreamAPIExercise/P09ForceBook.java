@@ -52,7 +52,7 @@ public class P09ForceBook {
             input = scanner.nextLine();
         }
 
-        teams.entrySet().stream().filter(teamEntry -> teamEntry.getValue().size() > 0) //оставяме само тези записи, които отговарят на условието
+        teams.entrySet().stream().filter(teamEntry -> teamEntry.getValue().size() > 0)
                 .forEach(entry -> {
                     System.out.printf("Side: %s, Members: %d%n", entry.getKey(), entry.getValue().size());
                     entry.getValue().forEach(player -> System.out.println("! " + player));
