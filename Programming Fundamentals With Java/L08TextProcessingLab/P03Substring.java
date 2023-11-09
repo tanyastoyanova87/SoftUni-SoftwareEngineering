@@ -24,5 +24,12 @@ public class P03Substring {
         }
 
         System.out.println(text);
+
+        // while (text.contains(word)) {
+        //
+        //    text = text.replace(word, "");
+        // }
+        //
+        // System.out.println(text);
     }
 }
