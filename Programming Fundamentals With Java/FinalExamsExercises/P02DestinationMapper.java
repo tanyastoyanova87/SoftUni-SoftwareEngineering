@@ -12,14 +12,14 @@ public class P02DestinationMapper {
 
         String text = scanner.nextLine();
 
-        Pattern pattern = Pattern.compile("=(?<destination>[A-Z][A-Za-z]{2,})=|/(?<destination2>[A-Z][A-Za-z]{2,})/");
+        Pattern pattern = Pattern.compile("=(?<destinationObtainedByFirstOperator>[A-Z][A-Za-z]{2,})=|/(?<destinationObtainedBySecondOperator>[A-Z][A-Za-z]{2,})/");
         Matcher matcher = pattern.matcher(text);
 
         List<String> destinations = new ArrayList<>();
         while (matcher.find()) {
 
-            String destination = matcher.group("destination");
-            String destination2 = matcher.group("destination2");
+            String destination = matcher.group("destinationObtainedByFirstOperator");
+            String destination2 = matcher.group("destinationObtainedBySecondOperator");
             if (destination != null) {
                 destinations.add(destination);
             }
