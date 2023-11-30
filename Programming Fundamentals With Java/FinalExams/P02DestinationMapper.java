@@ -10,26 +10,21 @@ public class P02DestinationMapper {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String text = scanner.nextLine();
-        Pattern pattern = Pattern.compile("=(?<destinationObtainedByFirstOperator>[A-Z][A-Za-z]{2,})=|/(?<destinationObtainedBySecondOperator>[A-Z][A-Za-z]{2,})/");
-        Matcher matcher = pattern.matcher(text);
+        String places = scanner.nextLine();
         List<String> destinations = new ArrayList<>();
+
+        Pattern pattern = Pattern.compile("([=/])(?<destination>[A-Z][A-Za-z]{2,})\\1");
+        Matcher matcher = pattern.matcher(places);
+
+        int totalLength = 0;
         while (matcher.find()) {
-            String destination = matcher.group("destinationObtainedByFirstOperator");
-            String destination2 = matcher.group("destinationObtainedBySecondOperator");
-            if (destination != null) {
-                destinations.add(destination);
-            }
-            if (destination2 != null) {
-                destinations.add(destination2);
-            }
+            destinations.add(matcher.group("destination"));
+            int destinationLength = matcher.group("destination").length();
+            totalLength += destinationLength;
         }
-        int travelPoints = 0;
-        for (String destination : destinations) {
-            travelPoints += destination.length();
-        }
+
         System.out.print("Destinations: ");
         System.out.println(String.join(", ", destinations));
-        System.out.println("Travel Points: " + travelPoints);
+        System.out.printf("Travel Points: %d%n", totalLength);
     }
 }
