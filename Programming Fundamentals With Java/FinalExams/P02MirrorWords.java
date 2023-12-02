@@ -22,10 +22,10 @@ public class P02MirrorWords {
             validPairs++;
             String firstWord = matcher.group("firstWord");
             String secondWord = matcher.group("secondWord");
-            StringBuilder secondWordBuilder = new StringBuilder(secondWord);
-            String reversedWord = String.valueOf(secondWordBuilder.reverse());
 
-            if (firstWord.equals(reversedWord)) {
+            StringBuilder secondWordBuilder = new StringBuilder(secondWord).reverse();
+
+            if (firstWord.equals(secondWordBuilder.toString())) {
                 matches.add(String.join(" <=> ", firstWord, secondWord));
             }
         }
